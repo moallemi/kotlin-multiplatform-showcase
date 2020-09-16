@@ -24,7 +24,11 @@ kotlin {
         }
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation(Dependencies.koinCore)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -42,7 +46,11 @@ kotlin {
                 implementation(Dependencies.junit)
             }
         }
-        val iosMain by getting
+        val iosMain by getting {
+            dependencies {
+                implementation(Dependencies.koinCore)
+            }
+        }
         val iosTest by getting
     }
 }

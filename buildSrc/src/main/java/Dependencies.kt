@@ -2,12 +2,13 @@ object Versions {
     const val kotlin = "1.4.10"
     const val androidxTest = "1.2.0"
     const val androidxTestExt = "1.1.1"
-    const val androidGradlePlugin = "4.0.1"
+    const val androidGradlePlugin = "4.0.1" // manually update in root settings.gradle.kts
     const val constraintLayout = "2.0.0"
     const val appCompat = "1.2.0"
     const val coreKtx = "1.2.0"
     const val materialDesign = "1.2.0"
     const val junit = "4.13"
+    const val koin = "3.0.1-alpha-2"
 
     object Android {
         const val minSdk = 21
@@ -25,6 +26,9 @@ object Dependencies {
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
+
+    const val koinCore = "org.koin:koin-core:${Versions.koin}"
+    const val koinTest = "org.koin:koin-test:${Versions.koin}"
 
     object AndroidXTest {
         const val core = "androidx.test:core:${Versions.androidxTest}"

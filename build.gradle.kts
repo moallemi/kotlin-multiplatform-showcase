@@ -13,6 +13,11 @@ buildscript {
 group = "me.moallemi.kmmshowcase"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven(url = "https://dl.bintray.com/touchlabpublic/kotlin")
+    }
 }

@@ -17,6 +17,7 @@ dependencies {
     implementation(Dependencies.materialDesign)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.constraintLayout)
+    implementation(Dependencies.koinCore)
 }
 android {
     compileSdkVersion(Versions.Android.compileSdk)
