@@ -9,6 +9,7 @@ object Versions {
     const val materialDesign = "1.2.0"
     const val junit = "4.13"
     const val koin = "3.0.1-alpha-2"
+    const val kermit = "0.1.8"
 
     object Android {
         const val minSdk = 21
@@ -27,6 +28,7 @@ object Dependencies {
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
 
+    const val kermit = "co.touchlab:kermit:${Versions.kermit}"
     const val koinCore = "org.koin:koin-core:${Versions.koin}"
     const val koinTest = "org.koin:koin-test:${Versions.koin}"
 

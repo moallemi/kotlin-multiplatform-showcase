@@ -19,6 +19,8 @@ kotlin {
     ios {
         binaries {
             framework {
+                export(Dependencies.kermit)
+                transitiveExport = true
                 baseName = "shared"
             }
         }
@@ -27,6 +29,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(Dependencies.koinCore)
+                api(Dependencies.kermit)
             }
         }
         val commonTest by getting {
