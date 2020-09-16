@@ -29,6 +29,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation(Dependencies.koinCore)
+                implementation(Dependencies.Coroutines.common)
                 api(Dependencies.kermit)
             }
         }
@@ -41,6 +42,7 @@ kotlin {
         val androidMain by getting {
             dependencies {
                 implementation(Dependencies.coreKtx)
+                implementation(Dependencies.Coroutines.test)
             }
         }
         val androidTest by getting {
@@ -52,6 +54,11 @@ kotlin {
         val iosMain by getting {
             dependencies {
                 implementation(Dependencies.koinCore)
+                implementation(Dependencies.Coroutines.common) {
+                    version {
+                        strictly(Versions.coroutines)
+                    }
+                }
             }
         }
         val iosTest by getting

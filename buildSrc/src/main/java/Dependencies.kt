@@ -10,6 +10,7 @@ object Versions {
     const val junit = "4.13"
     const val koin = "3.0.1-alpha-2"
     const val kermit = "0.1.8"
+    const val coroutines = "1.3.9-native-mt"
 
     object Android {
         const val minSdk = 21
@@ -44,5 +45,11 @@ object Dependencies {
         const val annotations = "org.jetbrains.kotlin:kotlin-test-annotations-common:${Versions.kotlin}"
         const val jvm = "org.jetbrains.kotlin:kotlin-test:${Versions.kotlin}"
         const val junit = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
+    }
+
+    object Coroutines {
+        const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
     }
 }

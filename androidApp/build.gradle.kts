@@ -18,6 +18,8 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.constraintLayout)
     implementation(Dependencies.koinCore)
+    implementation(Dependencies.Coroutines.common)
+    implementation(Dependencies.Coroutines.android)
 }
 android {
     compileSdkVersion(Versions.Android.compileSdk)
