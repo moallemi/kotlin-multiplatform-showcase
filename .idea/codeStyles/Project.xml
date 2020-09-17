@@ -5,7 +5,6 @@
         <value>
           <package name="java.util" alias="false" withSubpackages="false" />
           <package name="kotlinx.android.synthetic" alias="false" withSubpackages="true" />
-          <package name="io.ktor" alias="false" withSubpackages="true" />
         </value>
       </option>
       <option name="PACKAGES_IMPORT_LAYOUT">
