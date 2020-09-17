@@ -1,4 +1,4 @@
-package me.moallemi.kmmshowcase.shared
+package me.moallemi.kmmshowcase.shared.di
 
 import co.touchlab.kermit.Kermit
 import io.ktor.client.HttpClient
@@ -8,9 +8,7 @@ import io.ktor.client.features.logging.LogLevel
 import io.ktor.client.features.logging.Logger
 import io.ktor.client.features.logging.Logging
 import kotlinx.serialization.json.Json
-import me.moallemi.kmmshowcase.shared.network.api.Ketrofit
-import me.moallemi.kmmshowcase.shared.network.api.KmmShowcaseApi
-import me.moallemi.kmmshowcase.shared.network.api.KmmShowcaseApiImpl
+import me.moallemi.kmmshowcase.shared.network.api.KmpShowcaseApi
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
@@ -33,7 +31,7 @@ private val coreModule = module {
     single {
         HttpClient {
             install(JsonFeature) {
-                serializer = KotlinxSerializer()
+                serializer = KotlinxSerializer(this@single.get())
             }
             install(Logging) {
                 logger = object : Logger {
@@ -52,14 +50,10 @@ private val coreModule = module {
         Json {
             isLenient = true
             ignoreUnknownKeys = true
-            allowSpecialFloatingPointValues = true
         }
     }
     single {
-        Ketrofit(get(), get())
-    }
-    single<KmmShowcaseApi> {
-        KmmShowcaseApiImpl(get())
+        KmpShowcaseApi(get())
     }
 }
 

@@ -8,9 +8,10 @@ object Versions {
     const val coreKtx = "1.2.0"
     const val materialDesign = "1.2.0"
     const val junit = "4.13"
-    const val koin = "3.0.1-alpha-2"
+    const val koin = "3.0.0-alpha-4"
     const val kermit = "0.1.8"
     const val coroutines = "1.3.9-native-mt"
+    const val kotlinxSerialization = "1.0.0-RC"
     const val ktor = "1.4.0"
 
     object Android {
@@ -28,6 +29,7 @@ object Dependencies {
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
+    const val kotlinxSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinxSerialization}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
 

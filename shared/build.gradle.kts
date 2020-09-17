@@ -42,6 +42,7 @@ kotlin {
                 implementation(Dependencies.Ktor.commonJson)
                 implementation(Dependencies.Ktor.commonLogging)
                 implementation(Dependencies.Ktor.commonSerialization)
+                implementation(Dependencies.kotlinxSerialization)
                 api(Dependencies.kermit)
             }
         }

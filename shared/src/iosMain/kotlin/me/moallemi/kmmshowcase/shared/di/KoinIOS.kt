@@ -1,4 +1,4 @@
-package me.moallemi.kmmshowcase.shared
+package me.moallemi.kmmshowcase.shared.di
 
 import co.touchlab.kermit.Kermit
 import kotlinx.cinterop.ObjCClass
