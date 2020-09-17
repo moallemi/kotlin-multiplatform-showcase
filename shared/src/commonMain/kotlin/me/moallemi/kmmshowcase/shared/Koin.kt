@@ -1,5 +1,16 @@
 package me.moallemi.kmmshowcase.shared
 
+import co.touchlab.kermit.Kermit
+import io.ktor.client.HttpClient
+import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.serializer.KotlinxSerializer
+import io.ktor.client.features.logging.LogLevel
+import io.ktor.client.features.logging.Logger
+import io.ktor.client.features.logging.Logging
+import kotlinx.serialization.json.Json
+import me.moallemi.kmmshowcase.shared.network.api.Ketrofit
+import me.moallemi.kmmshowcase.shared.network.api.KmmShowcaseApi
+import me.moallemi.kmmshowcase.shared.network.api.KmmShowcaseApiImpl
 import org.koin.core.KoinApplication
 import org.koin.core.context.startKoin
 import org.koin.core.module.Module
@@ -19,7 +30,37 @@ fun initKoin(appModule: Module): KoinApplication {
 }
 
 private val coreModule = module {
+    single {
+        HttpClient {
+            install(JsonFeature) {
+                serializer = KotlinxSerializer()
+            }
+            install(Logging) {
+                logger = object : Logger {
+                    override fun log(message: String) {
+                        this@single.get<Kermit> {
+                            parametersOf("ktor")
+                        }.i { message }
+                    }
+                }
 
+                level = LogLevel.INFO
+            }
+        }
+    }
+    single {
+        Json {
+            isLenient = true
+            ignoreUnknownKeys = true
+            allowSpecialFloatingPointValues = true
+        }
+    }
+    single {
+        Ketrofit(get(), get())
+    }
+    single<KmmShowcaseApi> {
+        KmmShowcaseApiImpl(get())
+    }
 }
 
 internal inline fun <reified T> Scope.getWith(vararg params: Any?): T {
