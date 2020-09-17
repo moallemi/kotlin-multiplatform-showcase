@@ -8,6 +8,7 @@ buildscript {
     dependencies {
         classpath(Dependencies.kotlinGradlePlugin)
         classpath(Dependencies.androidGradlePlugin)
+        classpath(Dependencies.kotlinSerialization)
     }
 }
 group = "me.moallemi.kmmshowcase"

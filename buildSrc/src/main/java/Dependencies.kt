@@ -11,6 +11,7 @@ object Versions {
     const val koin = "3.0.1-alpha-2"
     const val kermit = "0.1.8"
     const val coroutines = "1.3.9-native-mt"
+    const val ktor = "1.4.0"
 
     object Android {
         const val minSdk = 21
@@ -26,6 +27,7 @@ object Dependencies {
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
+    const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
 
@@ -51,5 +53,21 @@ object Dependencies {
         const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
+    }
+
+    object Ktor {
+        const val commonCore = "io.ktor:ktor-client-core:${Versions.ktor}"
+        const val commonJson = "io.ktor:ktor-client-json:${Versions.ktor}"
+        const val commonLogging = "io.ktor:ktor-client-logging:${Versions.ktor}"
+        const val jvmCore = "io.ktor:ktor-client-core-jvm:${Versions.ktor}"
+        const val androidCore = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
+        const val jvmJson = "io.ktor:ktor-client-json-jvm:${Versions.ktor}"
+        const val jvmLogging = "io.ktor:ktor-client-logging-jvm:${Versions.ktor}"
+        const val ios = "io.ktor:ktor-client-ios:${Versions.ktor}"
+        const val iosCore = "io.ktor:ktor-client-core-native:${Versions.ktor}"
+        const val iosJson = "io.ktor:ktor-client-json-native:${Versions.ktor}"
+        const val iosLogging = "io.ktor:ktor-client-logging-native:${Versions.ktor}"
+        const val commonSerialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
+        const val androidSerialization = "io.ktor:ktor-client-serialization-jvm:${Versions.ktor}"
     }
 }

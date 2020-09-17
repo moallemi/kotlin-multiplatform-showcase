@@ -4,6 +4,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("kotlin-android-extensions")
+    id("kotlinx-serialization")
 }
 group = "me.moallemi.kmmshowcase"
 version = "1.0-SNAPSHOT"
@@ -26,10 +27,21 @@ kotlin {
         }
     }
     sourceSets {
+        all {
+            languageSettings.apply {
+                useExperimentalAnnotation("kotlin.RequiresOptIn")
+                useExperimentalAnnotation("kotlinx.coroutines.ExperimentalCoroutinesApi")
+                useExperimentalAnnotation("kotlinx.serialization.InternalSerializationApi")
+            }
+        }
         val commonMain by getting {
             dependencies {
                 implementation(Dependencies.koinCore)
                 implementation(Dependencies.Coroutines.common)
+                implementation(Dependencies.Ktor.commonCore)
+                implementation(Dependencies.Ktor.commonJson)
+                implementation(Dependencies.Ktor.commonLogging)
+                implementation(Dependencies.Ktor.commonSerialization)
                 api(Dependencies.kermit)
             }
         }
@@ -43,6 +55,11 @@ kotlin {
             dependencies {
                 implementation(Dependencies.coreKtx)
                 implementation(Dependencies.Coroutines.test)
+                implementation(Dependencies.Ktor.jvmCore)
+                implementation(Dependencies.Ktor.jvmJson)
+                implementation(Dependencies.Ktor.jvmLogging)
+                implementation(Dependencies.Ktor.androidSerialization)
+                implementation(Dependencies.Ktor.androidCore)
             }
         }
         val androidTest by getting {
@@ -59,6 +76,7 @@ kotlin {
                         strictly(Versions.coroutines)
                     }
                 }
+                implementation(Dependencies.Ktor.ios)
             }
         }
         val iosTest by getting
