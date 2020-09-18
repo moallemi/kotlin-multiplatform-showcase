@@ -5,7 +5,7 @@ import me.moallemi.kmmshowcase.shared.domain.model.Links
 import me.moallemi.kmmshowcase.shared.network.response.AppDto
 import me.moallemi.kmmshowcase.shared.network.response.LinksDto
 
-class AppDtoToApp(
+internal class AppDtoToApp(
     private val linksDtoToLinks: Mapper<LinksDto?, Links?>,
 ) : Mapper<AppDto, App> {
 

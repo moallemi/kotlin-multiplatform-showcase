@@ -19,3 +19,5 @@ rootProject.name = "KMMShowcase"
 include(":androidApp")
 include(":shared")
 
+enableFeaturePreview("GRADLE_METADATA")
+

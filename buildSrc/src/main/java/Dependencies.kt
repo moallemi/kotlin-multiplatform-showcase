@@ -35,6 +35,7 @@ object Dependencies {
 
     const val kermit = "co.touchlab:kermit:${Versions.kermit}"
     const val koinCore = "org.koin:koin-core:${Versions.koin}"
+    const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
     const val koinTest = "org.koin:koin-test:${Versions.koin}"
 
     object AndroidXTest {

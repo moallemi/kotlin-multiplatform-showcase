@@ -10,11 +10,7 @@ import org.koin.core.parameter.parametersOf
 import org.koin.core.qualifier.Qualifier
 import org.koin.dsl.module
 
-fun initKoinIos(): KoinApplication = initKoin(
-    module {
-
-    }
-)
+fun initKoinIos(): KoinApplication = initKoin()
 
 actual val platformModule = module {
     val baseKermit = Kermit(NSLogLogger()).withTag("KmmShowCase")

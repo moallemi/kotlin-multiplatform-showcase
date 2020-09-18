@@ -1,9 +1,8 @@
 package me.moallemi.kmmshowcase.androidApp.app
 
 import android.app.Application
-import android.content.Context
 import me.moallemi.kmmshowcase.shared.di.initKoin
-import org.koin.dsl.module
+import org.koin.android.ext.koin.androidContext
 
 class KmmShowCaseApp : Application() {
 
@@ -14,11 +13,9 @@ class KmmShowCaseApp : Application() {
     }
 
     private fun initializeKoin() {
-        initKoin(
-            module {
-                single<Context> { this@KmmShowCaseApp.applicationContext }
-            }
-        )
+        initKoin {
+            androidContext(this@KmmShowCaseApp)
+        }
     }
 
 }
