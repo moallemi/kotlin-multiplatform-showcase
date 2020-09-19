@@ -6,7 +6,7 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlinx-serialization")
 }
-group = "me.moallemi.kmmshowcase"
+group = "me.moallemi.kmpshowcase"
 version = "1.0-SNAPSHOT"
 
 repositories {

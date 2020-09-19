@@ -13,7 +13,7 @@ pluginManagement {
         }
     }
 }
-rootProject.name = "KMMShowcase"
+rootProject.name = "kmp-showcase"
 
 
 include(":androidApp")

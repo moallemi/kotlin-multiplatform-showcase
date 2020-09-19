@@ -3,7 +3,7 @@ plugins {
     kotlin("android")
     id("kotlin-android-extensions")
 }
-group = "me.moallemi.kmmshowcase"
+group = "me.moallemi.kmpshowcase"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -27,7 +27,6 @@ android {
     compileSdkVersion(Versions.Android.compileSdk)
     buildToolsVersion(Versions.Android.buildToolsVersion)
     defaultConfig {
-        applicationId = "me.moallemi.kmmshowcase.androidApp"
         minSdkVersion(Versions.Android.minSdk)
         targetSdkVersion(Versions.Android.targetSdk)
         versionCode = 1

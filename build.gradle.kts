@@ -11,7 +11,7 @@ buildscript {
         classpath(Dependencies.kotlinSerialization)
     }
 }
-group = "me.moallemi.kmmshowcase"
+group = "me.moallemi.kmpshowcase"
 version = "1.0-SNAPSHOT"
 
 allprojects {
