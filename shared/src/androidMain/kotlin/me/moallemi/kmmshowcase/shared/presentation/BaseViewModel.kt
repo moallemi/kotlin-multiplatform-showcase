@@ -5,6 +5,7 @@ import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import me.moallemi.kmmshowcase.shared.utils.log
 import kotlin.coroutines.CoroutineContext
 
 actual abstract class BaseViewModel actual constructor(
@@ -23,7 +24,7 @@ actual abstract class BaseViewModel actual constructor(
         }
 
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
-        //TODO log.e { throwable.message ?: throwable.toString() }
+        log(throwable.message)
     }
 
     actual override val coroutineContext: CoroutineContext
