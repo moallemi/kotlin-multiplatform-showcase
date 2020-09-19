@@ -1,6 +1,5 @@
 package me.moallemi.kmmshowcase.shared.di
 
-import co.touchlab.kermit.Kermit
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
@@ -22,9 +21,7 @@ internal val networkModule = module {
             install(Logging) {
                 logger = object : Logger {
                     override fun log(message: String) {
-                        this@single.get<Kermit> {
-                            parametersOf("ktor")
-                        }.i { message }
+                        // TODO
                     }
                 }
 

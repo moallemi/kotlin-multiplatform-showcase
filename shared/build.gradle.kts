@@ -20,8 +20,6 @@ kotlin {
     ios {
         binaries {
             framework {
-                export(Dependencies.kermit)
-                transitiveExport = true
                 baseName = "shared"
             }
         }
@@ -45,7 +43,6 @@ kotlin {
                 implementation(Dependencies.Ktor.commonSerialization)
 
                 implementation(Dependencies.kotlinxSerialization)
-                api(Dependencies.kermit)
             }
         }
         val commonTest by getting {

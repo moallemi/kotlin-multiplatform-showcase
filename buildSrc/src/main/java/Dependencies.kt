@@ -9,7 +9,6 @@ object Versions {
     const val materialDesign = "1.2.0"
     const val junit = "4.13"
     const val koin = "3.0.0-alpha-4"
-    const val kermit = "0.1.8"
     const val coroutines = "1.3.9-native-mt"
     const val kotlinxSerialization = "1.0.0-RC"
     const val lifecycle = "2.2.0"
@@ -35,8 +34,6 @@ object Dependencies {
     const val kotlinxSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinxSerialization}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
-
-    const val kermit = "co.touchlab:kermit:${Versions.kermit}"
 
     object Koin {
         const val core = "org.koin:koin-core:${Versions.koin}"

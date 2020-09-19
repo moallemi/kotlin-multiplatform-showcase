@@ -1,7 +1,5 @@
 package me.moallemi.kmmshowcase.shared.di
 
-import co.touchlab.kermit.Kermit
-import co.touchlab.kermit.NSLogLogger
 import kotlinx.cinterop.ObjCClass
 import kotlinx.cinterop.getOriginalKotlinClass
 import org.koin.core.Koin
@@ -14,10 +12,7 @@ fun initKoinIos(): KoinApplication = initKoin {
     modules(viewModelsModule)
 }
 
-actual val platformModule = module {
-    val baseKermit = Kermit(NSLogLogger()).withTag("KmmShowCase")
-    factory { (tag: String?) -> if (tag != null) baseKermit.withTag(tag) else baseKermit }
-}
+actual val platformModule = module {}
 
 fun Koin.get(objCClass: ObjCClass, qualifier: Qualifier?, parameter: Any): Any {
     val kClazz = getOriginalKotlinClass(objCClass)!!
