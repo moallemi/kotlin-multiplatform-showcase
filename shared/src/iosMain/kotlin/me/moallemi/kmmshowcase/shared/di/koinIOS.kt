@@ -1,16 +1,18 @@
 package me.moallemi.kmmshowcase.shared.di
 
 import co.touchlab.kermit.Kermit
+import co.touchlab.kermit.NSLogLogger
 import kotlinx.cinterop.ObjCClass
 import kotlinx.cinterop.getOriginalKotlinClass
-import co.touchlab.kermit.NSLogLogger
 import org.koin.core.Koin
 import org.koin.core.KoinApplication
 import org.koin.core.parameter.parametersOf
 import org.koin.core.qualifier.Qualifier
 import org.koin.dsl.module
 
-fun initKoinIos(): KoinApplication = initKoin()
+fun initKoinIos(): KoinApplication = initKoin {
+    modules(viewModelsModule)
+}
 
 actual val platformModule = module {
     val baseKermit = Kermit(NSLogLogger()).withTag("KmmShowCase")

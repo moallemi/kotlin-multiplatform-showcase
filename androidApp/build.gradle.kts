@@ -17,8 +17,9 @@ dependencies {
     implementation(Dependencies.materialDesign)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.constraintLayout)
-    implementation(Dependencies.koinCore)
-    implementation(Dependencies.koinAndroid)
+    implementation(Dependencies.Koin.core)
+    implementation(Dependencies.Koin.android)
+    implementation(Dependencies.Koin.viewModel)
     implementation(Dependencies.Coroutines.common)
     implementation(Dependencies.Coroutines.android)
 }
