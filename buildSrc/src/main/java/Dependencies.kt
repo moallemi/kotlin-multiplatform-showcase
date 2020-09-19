@@ -12,6 +12,7 @@ object Versions {
     const val kermit = "0.1.8"
     const val coroutines = "1.3.9-native-mt"
     const val kotlinxSerialization = "1.0.0-RC"
+    const val lifecycle = "2.2.0"
     const val ktor = "1.4.0"
 
     object Android {
@@ -26,6 +27,8 @@ object Dependencies {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
@@ -34,9 +37,13 @@ object Dependencies {
     const val junit = "junit:junit:${Versions.junit}"
 
     const val kermit = "co.touchlab:kermit:${Versions.kermit}"
-    const val koinCore = "org.koin:koin-core:${Versions.koin}"
-    const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
-    const val koinTest = "org.koin:koin-test:${Versions.koin}"
+
+    object Koin {
+        const val core = "org.koin:koin-core:${Versions.koin}"
+        const val android = "org.koin:koin-android:${Versions.koin}"
+        const val viewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
+        const val test = "org.koin:koin-test:${Versions.koin}"
+    }
 
     object AndroidXTest {
         const val core = "androidx.test:core:${Versions.androidxTest}"

@@ -36,12 +36,14 @@ kotlin {
         }
         val commonMain by getting {
             dependencies {
-                implementation(Dependencies.koinCore)
+                implementation(Dependencies.Koin.core)
                 implementation(Dependencies.Coroutines.common)
+
                 implementation(Dependencies.Ktor.commonCore)
                 implementation(Dependencies.Ktor.commonJson)
                 implementation(Dependencies.Ktor.commonLogging)
                 implementation(Dependencies.Ktor.commonSerialization)
+
                 implementation(Dependencies.kotlinxSerialization)
                 api(Dependencies.kermit)
             }
@@ -56,11 +58,15 @@ kotlin {
             dependencies {
                 implementation(Dependencies.coreKtx)
                 implementation(Dependencies.Coroutines.test)
+
                 implementation(Dependencies.Ktor.jvmCore)
                 implementation(Dependencies.Ktor.jvmJson)
                 implementation(Dependencies.Ktor.jvmLogging)
                 implementation(Dependencies.Ktor.androidSerialization)
                 implementation(Dependencies.Ktor.androidCore)
+
+                implementation(Dependencies.lifecycleExtensions)
+                implementation(Dependencies.lifecycleExtensions)
             }
         }
         val androidTest by getting {
@@ -71,7 +77,7 @@ kotlin {
         }
         val iosMain by getting {
             dependencies {
-                implementation(Dependencies.koinCore)
+                implementation(Dependencies.Koin.core)
                 implementation(Dependencies.Coroutines.common) {
                     version {
                         strictly(Versions.coroutines)
