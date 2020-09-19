@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/reza/projects/kmp-showcase/iosApp/KmpShowcase.xcodeproj">
    </FileRef>
 </Workspace>
