@@ -23,6 +23,10 @@
         <item name="chipStyle">@style/Widget.App.Chip</item>
     </style>
 
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@drawable/branded_splash_bg</item>
+    </style>
+
     <style name="Widget.App.Chip" parent="Widget.MaterialComponents.Chip.Action">
         <item name="chipIconTint">@color/primaryVariantColor</item>
         <item name="chipBackgroundColor">#cdcefe</item>
