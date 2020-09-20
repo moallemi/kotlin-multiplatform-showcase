@@ -13,7 +13,7 @@ internal class AppDtoToApp(
         App(
             id = name,
             name = name,
-            description = description,
+            summary = summary,
             links = linksDtoToLinks.map(links)
         )
     }

@@ -7,7 +7,7 @@ import me.moallemi.kmpshowcase.shared.network.response.AppsResponseDto
 class KmpShowcaseApi(
     private val httpClient: HttpClient,
 ) {
-    private val baseUrl = "https://kmm-showcase.herokuapp.com"
+    private val baseUrl = "https://kmp-showcase.herokuapp.com"
 
     suspend fun getApps(): AppsResponseDto = httpClient.get("$baseUrl/api/v1/apps")
 }

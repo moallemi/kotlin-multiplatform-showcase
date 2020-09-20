@@ -5,6 +5,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class AppDto(
     val name: String,
-    val description: String,
+    val summary: String,
     val links: LinksDto?
 )
