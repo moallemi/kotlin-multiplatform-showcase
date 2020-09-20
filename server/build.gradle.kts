@@ -4,6 +4,9 @@ plugins {
     kotlin("plugin.serialization")
 }
 
+group = "me.moallemi.kmpshowcase.server"
+version = "1.0.0"
+
 dependencies {
 
     implementation("io.ktor:ktor-server-core:${Versions.ktor}")
@@ -11,7 +14,9 @@ dependencies {
     implementation("io.ktor:ktor-serialization:${Versions.ktor}")
 
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinxSerialization}")
-    implementation ("ch.qos.logback:logback-classic:${Versions.logback}")
+    implementation("ch.qos.logback:logback-classic:${Versions.logback}")
+
+    testImplementation("io.ktor:ktor-server-tests:${Versions.ktor}")
 }
 
 application {
