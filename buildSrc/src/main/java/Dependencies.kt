@@ -14,6 +14,7 @@ object Versions {
     const val lifecycle = "2.2.0"
     const val ktor = "1.4.0"
     const val recyclerView = "1.2.0-alpha05"
+    const val logback = "1.2.3"
 
     object Android {
         const val minSdk = 21
