@@ -13,6 +13,7 @@ object Versions {
     const val kotlinxSerialization = "1.0.0-RC"
     const val lifecycle = "2.2.0"
     const val ktor = "1.4.0"
+    const val recyclerView = "1.2.0-alpha05"
 
     object Android {
         const val minSdk = 21
@@ -25,15 +26,19 @@ object Versions {
 object Dependencies {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
+    const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerView}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
-    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
-    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
     const val kotlinxSerialization = "org.jetbrains.kotlinx:kotlinx-serialization-core:${Versions.kotlinxSerialization}"
     const val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     const val junit = "junit:junit:${Versions.junit}"
+
+    object LifeCycle {
+        const val extensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+        const val runtime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    }
 
     object Koin {
         const val core = "org.koin:koin-core:${Versions.koin}"

@@ -11,6 +11,7 @@ internal class AppDtoToApp(
 
     override fun map(from: AppDto) = with(from) {
         App(
+            id = name,
             name = name,
             description = description,
             links = linksDtoToLinks.map(links)

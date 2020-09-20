@@ -62,8 +62,7 @@ kotlin {
                 implementation(Dependencies.Ktor.androidSerialization)
                 implementation(Dependencies.Ktor.androidCore)
 
-                implementation(Dependencies.lifecycleExtensions)
-                implementation(Dependencies.lifecycleExtensions)
+                implementation(Dependencies.LifeCycle.extensions)
             }
         }
         val androidTest by getting {

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
+    <dimen name="space_16dp">16dp</dimen>
+    <dimen name="space_32dp">32dp</dimen>
+    <dimen name="half_space">@dimen/space_4dp</dimen>
+    <dimen name="space_standard">@dimen/space_8dp</dimen>
+    <dimen name="space_double">@dimen/space_16dp</dimen>
+    <dimen name="space_quadrupole">@dimen/space_32dp</dimen>
+
+    <dimen name="toolbar_expanded_height">110dp</dimen>
+</resources>

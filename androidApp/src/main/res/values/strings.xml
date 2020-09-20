@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_items_artwork">No items artwork</string>
+    <string name="nothing_to_show">Nothing to show yet!</string>
+    <string name="app_name">KMP Showcase</string>
+    <string name="google_play">Google Play</string>
+    <string name="app_store">App Store</string>
+    <string name="mac_app_store">Mac App Store</string>
+    <string name="website">Website</string>
+</resources>
