@@ -14,7 +14,8 @@ internal class AppDtoToApp(
             id = name,
             name = name,
             summary = summary,
-            links = linksDtoToLinks.map(links)
+            links = linksDtoToLinks.map(links),
+            bannerUrl = bannerUrl
         )
     }
 }
