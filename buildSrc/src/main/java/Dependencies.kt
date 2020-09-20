@@ -14,6 +14,7 @@ object Versions {
     const val lifecycle = "2.2.0"
     const val ktor = "1.4.0"
     const val recyclerView = "1.2.0-alpha05"
+    const val glide = "4.11.0"
     const val logback = "1.2.3"
 
     object Android {
@@ -66,6 +67,11 @@ object Dependencies {
         const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
+    }
+
+    object Glide {
+        const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
+        const val compiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
     }
 
     object Ktor {

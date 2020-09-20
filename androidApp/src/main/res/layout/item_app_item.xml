@@ -14,9 +14,11 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@color/thumbnailBackgroundColor" />
+            android:background="@color/thumbnailBackgroundColor"
+            android:padding="@dimen/space_quadrupole" />
 
         <TextView
             android:id="@+id/title"
@@ -27,7 +29,7 @@
             tools:text="Golchin" />
 
         <TextView
-            android:id="@+id/description"
+            android:id="@+id/summary"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="@dimen/space_double"

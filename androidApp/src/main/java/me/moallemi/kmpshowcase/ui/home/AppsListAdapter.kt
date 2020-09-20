@@ -5,6 +5,7 @@ import me.moallemi.kmpshowcase.R
 import me.moallemi.kmpshowcase.databinding.ItemAppItemBinding
 import me.moallemi.kmpshowcase.shared.domain.model.App
 import me.moallemi.kmpshowcase.ui.base.adapter.IdentifiableAdapter
+import me.moallemi.kmpshowcase.util.load
 
 class AppsListAdapter : IdentifiableAdapter<App, ItemAppItemBinding>(R.layout.item_app_item) {
 
@@ -12,7 +13,8 @@ class AppsListAdapter : IdentifiableAdapter<App, ItemAppItemBinding>(R.layout.it
         val binding = ItemAppItemBinding.bind(itemView)
         with(binding) {
             title.text = model.name
-            description.text = model.summary
+            summary.text = model.summary
+            banner.load(model.bannerUrl)
         }
     }
 }

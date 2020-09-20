@@ -27,6 +27,8 @@ dependencies {
 
     implementation(Dependencies.Coroutines.common)
     implementation(Dependencies.Coroutines.android)
+
+    implementation(Dependencies.Glide.glide)
 }
 android {
     compileSdkVersion(Versions.Android.compileSdk)
