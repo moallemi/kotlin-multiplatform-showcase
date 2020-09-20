@@ -16,7 +16,8 @@
         <item name="android:textColorPrimary">@color/primaryTextColor</item>
         <item name="android:textColorSecondary">@color/secondaryTextColor</item>
         <item name="android:textColorTertiary">@color/tertiaryTextColor</item>
-
+        <item name="fontFamily">@font/noto_sans</item>
+        <item name="android:fontFamily">@font/noto_sans</item>
         <item name="colorControlNormal">@color/primaryTextColor</item>
         <item name="android:statusBarColor">@color/statusBarColor</item>
         <item name="chipStyle">@style/Widget.App.Chip</item>
