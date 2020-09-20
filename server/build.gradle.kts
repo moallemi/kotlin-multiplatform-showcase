@@ -22,3 +22,7 @@ dependencies {
 application {
     mainClassName = "io.ktor.server.netty.EngineMain"
 }
+
+tasks.create("stage") {
+    dependsOn(tasks.getByName("installDist"))
+}
