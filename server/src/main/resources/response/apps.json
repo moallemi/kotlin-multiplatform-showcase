@@ -1,0 +1,68 @@
+{
+  "lastUpdate": "2020-09-17T11:53:11.133Z",
+  "apps": [
+    {
+      "name": "PlanGrid",
+      "id": "plangrid",
+      "summary": "Autodesk introduced Kotlin Multiplatform Mobile to their PlanGrid app to ship a single source of truth for offline sync logic and data models on 3 mobile platforms: iOS, Android, and Windows.",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/plangrid-construction-collaboration/id498795789",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.plangrid.android&hl=en",
+        "website": "https://www.plangrid.com"
+      }
+    },
+    {
+      "name": "Golchin",
+      "id": "golchin",
+      "summary": "As millions of people create videos every day on YouTube, finding what you love to watch, in your own language, could be an issue. What if there was an app which offered curated Persian videos for you. Here it comes Golchin.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/id1530458228",
+        "googlePlay": "https://play.google.com/store/apps/details?id=io.golchin",
+        "website": "https://golchin.io"
+      }
+    },
+    {
+      "name": "Cash App",
+      "id": "cache-app",
+      "summary": "Cash App is a mobile payment service developed by Square, Inc., allowing users to transfer money to one another using a mobile phone app. A lot of app business logic, including an ability to search through all transactions, is implemented with Kotlin Multiplatform Mobile.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/square-cash/id711923939",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash",
+        "website": "https://cash.app"
+      }
+    },
+    {
+      "name": "Quizlet",
+      "id": "quizlet",
+      "summary": "Kotlin Multiplatform Mobile powers the Quizlet app, a global learning platform with 100 million active installs that provides engaging study tools to help people practice and master whatever they are learning.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/quizlet-flashcards-study-tools/id546473125",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
+        "website": "https://quizlet.com/"
+      }
+    },
+    {
+      "name": "Careem",
+      "id": "careem",
+      "summary": "Careem is a transportation network company with operations in the Middle East, Africa, and South Asia. Careem driver applications are built using Kotlin Multiplatform Mobile.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/careem-rides-food-delivery/id592978487",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.careem.acma",
+        "website": "https://www.careem.com"
+      }
+    },
+    {
+      "name": "Chalk",
+      "id": "chalk",
+      "summary": "The UI for each of the Chalk.com apps is native to the platform, but other than that, almost everything else for their apps can be shared with Kotlin Multiplatform Mobile.",
+      "bannerUrl": "",
+      "links": {
+        "website": "https://www.chalk.com/"
+      }
+    }
+  ]
+}
