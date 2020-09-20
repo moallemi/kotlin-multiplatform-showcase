@@ -15,10 +15,20 @@
             android:id="@+id/collapsing_toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:title="@string/app_name"
+            app:contentScrim="@color/statusBarColor"
             app:expandedTitleMarginEnd="@dimen/space_double"
             app:expandedTitleMarginStart="@dimen/space_double"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <ImageView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/space_double"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_kmp_small_art"
+                app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -28,7 +38,8 @@
                 app:contentInsetEndWithActions="@dimen/space_double"
                 app:contentInsetStart="@dimen/space_double"
                 app:contentInsetStartWithNavigation="@dimen/space_double"
-                app:layout_collapseMode="pin" />
+                app:layout_collapseMode="pin"
+                app:title="@string/kotlin_multi_platform_showcase" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -40,6 +51,7 @@
         android:layout_height="match_parent"
         android:clipToPadding="false"
         android:orientation="vertical"
+        android:paddingTop="@dimen/space_standard"
         android:paddingBottom="@dimen/space_double"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -48,7 +60,6 @@
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_gravity="center" />
 
     <LinearLayout

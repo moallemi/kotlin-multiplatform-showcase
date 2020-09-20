@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryVariantColor">#3c30d2</color>
+    <color name="primaryColor">#4c49eb</color>
+    <color name="onPrimaryColor">#ffffff</color>
+    <color name="surfaceColor">#212121</color>
+    <color name="secondaryVariantColor">#ea0328</color>
+    <color name="secondaryColor">#ff414a</color>
+    <color name="onSecondaryColor">#212121</color>
+    <color name="onSurfaceColor">#ffffff</color>
+    <color name="backgroundColor">#212121</color>
+    <color name="onBackgroundColor">#ffffff</color>
+    <color name="errorColor">#ffb300</color>
+    <color name="onErrorColor">#212121</color>
+    <color name="statusBarColor">@android:color/black</color>
+
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#999999</color>
+    <color name="tertiaryTextColor">#808080</color>
+
+    <color name="thumbnailBackgroundColor">#191919</color>
+    <color name="dividerColor">#434447</color>
+</resources>

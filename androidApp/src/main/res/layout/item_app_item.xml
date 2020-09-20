@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/space_double">
+    android:layout_marginHorizontal="@dimen/space_double"
+    android:layout_marginVertical="@dimen/space_standard"
+    app:cardCornerRadius="@dimen/space_double">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,7 +16,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="#eee" />
+            android:background="@color/thumbnailBackgroundColor" />
 
         <TextView
             android:id="@+id/title"
@@ -32,44 +34,46 @@
             android:layout_marginBottom="@dimen/space_standard"
             tools:text="As millions of people create videos every day on YouTube, finding what you love to watch, in your own language, could be an issue. What if there was an app which offered curated Persian videos for you. Here it comes Golchin." />
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/linksGroup"
+        <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:chipSpacing="@dimen/space_standard">
+            android:layout_marginBottom="@dimen/space_standard"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/space_double"
+            android:scrollbars="none">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/googlePlay"
-                style="@style/Widget.MaterialComponents.Chip.Action"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/linksGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/half_space"
-                android:text="@string/google_play" />
+                app:chipSpacing="@dimen/space_half"
+                app:singleLine="true">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/appStore"
-                style="@style/Widget.MaterialComponents.Chip.Action"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/half_space"
-                android:text="@string/app_store" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/googlePlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/google_play"
+                    app:chipIcon="@drawable/ic_google_play_icon"
+                    app:iconStartPadding="@dimen/space_half" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/macAppStore"
-                style="@style/Widget.MaterialComponents.Chip.Action"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/half_space"
-                android:text="@string/mac_app_store" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/appStore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_store"
+                    app:chipIcon="@drawable/ic_apple_app_store_icon"
+                    app:iconStartPadding="@dimen/space_half" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/website"
-                style="@style/Widget.MaterialComponents.Chip.Action"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/half_space"
-                android:text="@string/website" />
-        </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/website"
+                    app:chipIcon="@drawable/ic_web"
+                    app:iconStartPadding="@dimen/space_half" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

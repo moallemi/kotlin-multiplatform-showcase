@@ -53,7 +53,7 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
-                implementation(Dependencies.coreKtx)
+                api(Dependencies.coreKtx)
                 implementation(Dependencies.Coroutines.test)
 
                 implementation(Dependencies.Ktor.jvmCore)

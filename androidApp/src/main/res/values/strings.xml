@@ -7,4 +7,5 @@
     <string name="app_store">App Store</string>
     <string name="mac_app_store">Mac App Store</string>
     <string name="website">Website</string>
+    <string name="kotlin_multi_platform_showcase">Kotlin Multiplatform Showcase</string>
 </resources>

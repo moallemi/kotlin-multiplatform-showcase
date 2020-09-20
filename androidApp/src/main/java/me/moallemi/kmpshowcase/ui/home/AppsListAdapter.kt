@@ -12,7 +12,7 @@ class AppsListAdapter : IdentifiableAdapter<App, ItemAppItemBinding>(R.layout.it
         val binding = ItemAppItemBinding.bind(itemView)
         with(binding) {
             title.text = model.name
-            description.text = model.description
+            description.text = model.summary
         }
     }
 }

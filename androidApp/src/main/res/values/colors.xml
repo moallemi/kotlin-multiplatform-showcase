@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="primaryVariantColor">#3c30d2</color>
+    <color name="primaryColor">#4c49eb</color>
+    <color name="onPrimaryColor">#ffffff</color>
+    <color name="surfaceColor">#ffffff</color>
+    <color name="secondaryVariantColor">#ea0328</color>
+    <color name="secondaryColor">#ff414a</color>
+    <color name="onSecondaryColor">#212121</color>
+    <color name="onSurfaceColor">#212121</color>
+    <color name="backgroundColor">#ffffff</color>
+    <color name="onBackgroundColor">#212121</color>
+    <color name="errorColor">#ffb300</color>
+    <color name="onErrorColor">#212121</color>
+    <color name="statusBarColor">@color/primaryVariantColor</color>
+
+
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#555555</color>
+    <color name="tertiaryTextColor">#808080</color>
+
+    <color name="backButtonBackgroundColor">#26000000</color>
+
+    <color name="thumbnailBackgroundColor">#EAEAEA</color>
+    <color name="dividerColor">#eee</color>
 </resources>

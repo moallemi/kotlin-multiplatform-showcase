@@ -49,11 +49,26 @@ android {
         }
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     packagingOptions {
         packagingOptions {
             exclude("META-INF/AL2.0")
             exclude("META-INF/LGPL2.1")
             exclude("META-INF/*.kotlin_module")
         }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = listOf(
+            *kotlinOptions.freeCompilerArgs.toTypedArray(),
+            "-Xallow-jvm-ir-dependencies",
+            "-Xskip-prerelease-check"
+        )
     }
 }
