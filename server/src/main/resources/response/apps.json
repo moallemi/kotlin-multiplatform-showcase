@@ -1,6 +1,17 @@
 {
-  "lastUpdate": "2020-09-17T11:53:11.133Z",
+  "lastUpdate": "2020-09-21T11:53:11.133Z",
   "apps": [
+    {
+      "name": "Quizlet",
+      "id": "quizlet",
+      "summary": "Kotlin Multiplatform Mobile powers the Quizlet app, a global learning platform with 100 million active installs that provides engaging study tools to help people practice and master whatever they are learning.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/quizlet-flashcards-study-tools/id546473125",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
+        "website": "https://quizlet.com/"
+      }
+    },
     {
       "name": "PlanGrid",
       "id": "plangrid",
@@ -34,14 +45,23 @@
       }
     },
     {
-      "name": "Quizlet",
-      "id": "quizlet",
-      "summary": "Kotlin Multiplatform Mobile powers the Quizlet app, a global learning platform with 100 million active installs that provides engaging study tools to help people practice and master whatever they are learning.",
+      "name": "Chalk",
+      "id": "chalk",
+      "summary": "The UI for each of the Chalk.com apps is native to the platform, but other than that, almost everything else for their apps can be shared with Kotlin Multiplatform Mobile.",
       "bannerUrl": "",
       "links": {
-        "appStore": "https://apps.apple.com/us/app/quizlet-flashcards-study-tools/id546473125",
-        "googlePlay": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
-        "website": "https://quizlet.com/"
+        "website": "https://www.chalk.com/"
+      }
+    },
+    {
+      "name": "Fastwork",
+      "id": "fastwork",
+      "summary": "Fastwork is one of the largest professional freelancing platforms in Southeast Asia in terms of both the number of users it has and the number of projects completed.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/fastwork-hire-freelancers-at-your-fingertips/id1154830520?ls=1",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.fastwork.app&hl=en",
+        "website": "https://fastwork.co/"
       }
     },
     {
@@ -53,15 +73,6 @@
         "appStore": "https://apps.apple.com/us/app/careem-rides-food-delivery/id592978487",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.careem.acma",
         "website": "https://www.careem.com"
-      }
-    },
-    {
-      "name": "Chalk",
-      "id": "chalk",
-      "summary": "The UI for each of the Chalk.com apps is native to the platform, but other than that, almost everything else for their apps can be shared with Kotlin Multiplatform Mobile.",
-      "bannerUrl": "",
-      "links": {
-        "website": "https://www.chalk.com/"
       }
     }
   ]
