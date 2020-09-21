@@ -39,8 +39,5 @@ extension AppListViewModelWrapper: Kotlinx_coroutines_coreFlowCollector {
 	}
 }
 
-extension App: Identifiable {
-	public var id: Int {
-		return self.hashValue
-	}
+extension App: Swift.Identifiable {
 }

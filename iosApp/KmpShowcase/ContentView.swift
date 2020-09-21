@@ -2,26 +2,29 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	@ObservedObject private var viewModel = AppListViewModelWrapper()
+	@StateObject private var viewModel = AppListViewModelWrapper()
 
     var body: some View {
 		NavigationView {
 			List(viewModel.apps) { app in
-				VStack(alignment: .leading) {
+				VStack(alignment: .leading, spacing: 8) {
 					Text(app.name)
-						.font(.headline)
-						.fontWeight(.bold)
-					Text(app.description)
+						.font(.title2)
+						.fontWeight(.semibold)
+					Text(app.summary)
 						.font(.body)
 
 					makeLinksButtons(using: app.links)
 				}
+				.padding(.vertical)
 			}
+			.listStyle(InsetGroupedListStyle())
 			.navigationBarTitle("KMP Showcase")
 			.onAppear {
 				viewModel.load()
 			}
 		}
+		.navigationViewStyle(StackNavigationViewStyle())
     }
 
 	@ViewBuilder
