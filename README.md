@@ -1,5 +1,7 @@
 # Kotlin Mulitplatform Showcase
 
+<img src="https://github.com/moallemi/kmp-showcase/blob/master/.github/kmp-showcase.png?raw=true">
+
 A minimal app illustrating **Kotlin Multiplatform**. Currently running on
 * Android
 * iOS
