@@ -6,7 +6,7 @@ struct AppListView: View {
 	var body: some View {
 		NavigationView {
 			if viewModel.apps.isEmpty {
-				ProgressView("Loading…")
+				ProgressView("loading")
 			} else {
 				List {
 					Image("kmp-artwork")
@@ -24,7 +24,7 @@ struct AppListView: View {
 					.padding(.vertical)
 				}
 				.listStyle(InsetGroupedListStyle())
-				.navigationBarTitle("KMP Showcase")
+				.navigationBarTitle("app_list_page_title")
 			}
 		}
 		.onAppear(perform: viewModel.load)

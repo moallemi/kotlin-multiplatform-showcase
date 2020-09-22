@@ -47,21 +47,21 @@ struct AppRowView: View {
 						Button(action: {
 							didClickOn(link)
 						}) {
-							Label("App Store", image: "appstore")
+							Label("app_store", image: "appstore")
 						}
 					}
 					links.googlePlay.map { link in
 						Button(action: {
 							didClickOn(link)
 						}) {
-							Label("Google Play", systemImage: "g.circle")
+							Label("google_play", systemImage: "g.circle")
 						}
 					}
 					links.website.map { link in
 						Button(action: {
 							didClickOn(link)
 						}) {
-							Label("Website", systemImage: "globe")
+							Label("website", systemImage: "globe")
 						}
 					}
 				}

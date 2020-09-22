@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  KmpShowcase
+
+  Created by Saeed Taheri on 9/22/20.
+  Copyright © 2020 orgName. All rights reserved.
+*/
+"loading" = "Loading…";
+"app_list_page_title" = "KMP Showcase";
+"app_store" = "App Store";
+"google_play" = "Google Play";
+"website" = "Website";
