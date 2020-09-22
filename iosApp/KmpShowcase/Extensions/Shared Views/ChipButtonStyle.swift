@@ -14,7 +14,7 @@ struct ChipButtonStyle: ButtonStyle {
 			.padding(.vertical, 8)
 			.padding(.horizontal)
 			.background(Color.accentColor)
-			.foregroundColor(Color(.systemBackground))
+			.foregroundColor(.white)
 			.clipShape(Capsule())
 			.scaleEffect(configuration.isPressed ? 0.95 : 1)
 	}
