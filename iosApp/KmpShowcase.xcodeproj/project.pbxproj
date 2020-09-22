@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		301B08F92516A5D3003D9BAE /* AppListViewModelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B08F82516A5D3003D9BAE /* AppListViewModelWrapper.swift */; };
+		30E58C292519227F00EB20A8 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 30E58C282519227F00EB20A8 /* Nuke */; };
+		30E58C2E2519229800EB20A8 /* FetchImage in Frameworks */ = {isa = PBXBuildFile; productRef = 30E58C2D2519229800EB20A8 /* FetchImage */; };
+		30E58C32251922C200EB20A8 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58C31251922C200EB20A8 /* ImageView.swift */; };
+		30E58C362519269B00EB20A8 /* ChipButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */; };
 		7555FF7F242A565900829871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF7E242A565900829871 /* AppDelegate.swift */; };
 		7555FF81242A565900829871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF80242A565900829871 /* SceneDelegate.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
@@ -54,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		301B08F82516A5D3003D9BAE /* AppListViewModelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewModelWrapper.swift; sourceTree = "<group>"; };
+		30E58C31251922C200EB20A8 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipButtonStyle.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* KmpShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KmpShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7E242A565900829871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555FF80242A565900829871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E58C2E2519229800EB20A8 /* FetchImage in Frameworks */,
 				7555FFB2242A642300829871 /* shared.framework in Frameworks */,
+				30E58C292519227F00EB20A8 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +139,8 @@
 				7555FF89242A565B00829871 /* LaunchScreen.storyboard */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				7555FF86242A565B00829871 /* Preview Content */,
+				30E58C31251922C200EB20A8 /* ImageView.swift */,
+				30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */,
 			);
 			path = KmpShowcase;
 			sourceTree = "<group>";
@@ -187,6 +197,10 @@
 			dependencies = (
 			);
 			name = KmpShowcase;
+			packageProductDependencies = (
+				30E58C282519227F00EB20A8 /* Nuke */,
+				30E58C2D2519229800EB20A8 /* FetchImage */,
+			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* KmpShowcase.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +273,10 @@
 				Base,
 			);
 			mainGroup = 7555FF72242A565900829871;
+			packageReferences = (
+				30E58C272519227F00EB20A8 /* XCRemoteSwiftPackageReference "Nuke" */,
+				30E58C2C2519229800EB20A8 /* XCRemoteSwiftPackageReference "FetchImage" */,
+			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -323,10 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E58C32251922C200EB20A8 /* ImageView.swift in Sources */,
 				301B08F92516A5D3003D9BAE /* AppListViewModelWrapper.swift in Sources */,
 				7555FF7F242A565900829871 /* AppDelegate.swift in Sources */,
 				7555FF81242A565900829871 /* SceneDelegate.swift in Sources */,
 				F5AD768825129C9500FFF583 /* Koin.swift in Sources */,
+				30E58C362519269B00EB20A8 /* ChipButtonStyle.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +670,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30E58C272519227F00EB20A8 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.2;
+			};
+		};
+		30E58C2C2519229800EB20A8 /* XCRemoteSwiftPackageReference "FetchImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/FetchImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30E58C282519227F00EB20A8 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E58C272519227F00EB20A8 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		30E58C2D2519229800EB20A8 /* FetchImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30E58C2C2519229800EB20A8 /* XCRemoteSwiftPackageReference "FetchImage" */;
+			productName = FetchImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7555FF73242A565900829871 /* Project object */;
 }
