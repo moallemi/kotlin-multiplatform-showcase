@@ -14,7 +14,7 @@
 		30E58C362519269B00EB20A8 /* ChipButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */; };
 		7555FF7F242A565900829871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF7E242A565900829871 /* AppDelegate.swift */; };
 		7555FF81242A565900829871 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF80242A565900829871 /* SceneDelegate.swift */; };
-		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
+		7555FF83242A565900829871 /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* AppListView.swift */; };
 		7555FF85242A565B00829871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF84242A565B00829871 /* Assets.xcassets */; };
 		7555FF88242A565B00829871 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF87242A565B00829871 /* Preview Assets.xcassets */; };
 		7555FF8B242A565B00829871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7555FF89242A565B00829871 /* LaunchScreen.storyboard */; };
@@ -63,7 +63,7 @@
 		7555FF7B242A565900829871 /* KmpShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KmpShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF7E242A565900829871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7555FF80242A565900829871 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7555FF82242A565900829871 /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
 		7555FF84242A565B00829871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7555FF87242A565B00829871 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7555FF8A242A565B00829871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,6 +106,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30E58C452519EDCE00EB20A8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7555FF7E242A565900829871 /* AppDelegate.swift */,
+				7555FF80242A565900829871 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		30E58C482519EDDC00EB20A8 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				F5AD768725129C9500FFF583 /* Koin.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		30E58C4B2519EE0F00EB20A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7555FF84242A565B00829871 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		30E58C4C2519EE1A00EB20A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7555FF89242A565B00829871 /* LaunchScreen.storyboard */,
+				7555FF8C242A565B00829871 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30E58C4D2519EE8500EB20A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30E58C502519EE9000EB20A8 /* Shared Views */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30E58C502519EE9000EB20A8 /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */,
+				30E58C31251922C200EB20A8 /* ImageView.swift */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		30E58C532519EEA700EB20A8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				30E58C562519EEB000EB20A8 /* AppList */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		30E58C562519EEB000EB20A8 /* AppList */ = {
+			isa = PBXGroup;
+			children = (
+				7555FF82242A565900829871 /* AppListView.swift */,
+				301B08F82516A5D3003D9BAE /* AppListViewModelWrapper.swift */,
+			);
+			path = AppList;
+			sourceTree = "<group>";
+		};
 		7555FF72242A565900829871 = {
 			isa = PBXGroup;
 			children = (
@@ -130,17 +198,13 @@
 		7555FF7D242A565900829871 /* KmpShowcase */ = {
 			isa = PBXGroup;
 			children = (
-				7555FF7E242A565900829871 /* AppDelegate.swift */,
-				7555FF80242A565900829871 /* SceneDelegate.swift */,
-				7555FF82242A565900829871 /* ContentView.swift */,
-				301B08F82516A5D3003D9BAE /* AppListViewModelWrapper.swift */,
-				F5AD768725129C9500FFF583 /* Koin.swift */,
-				7555FF84242A565B00829871 /* Assets.xcassets */,
-				7555FF89242A565B00829871 /* LaunchScreen.storyboard */,
-				7555FF8C242A565B00829871 /* Info.plist */,
+				30E58C452519EDCE00EB20A8 /* App */,
+				30E58C482519EDDC00EB20A8 /* DI */,
+				30E58C4D2519EE8500EB20A8 /* Extensions */,
 				7555FF86242A565B00829871 /* Preview Content */,
-				30E58C31251922C200EB20A8 /* ImageView.swift */,
-				30E58C352519269B00EB20A8 /* ChipButtonStyle.swift */,
+				30E58C4B2519EE0F00EB20A8 /* Resources */,
+				30E58C4C2519EE1A00EB20A8 /* Supporting Files */,
+				30E58C532519EEA700EB20A8 /* UI */,
 			);
 			path = KmpShowcase;
 			sourceTree = "<group>";
@@ -347,7 +411,7 @@
 				7555FF81242A565900829871 /* SceneDelegate.swift in Sources */,
 				F5AD768825129C9500FFF583 /* Koin.swift in Sources */,
 				30E58C362519269B00EB20A8 /* ChipButtonStyle.swift in Sources */,
-				7555FF83242A565900829871 /* ContentView.swift in Sources */,
+				7555FF83242A565900829871 /* AppListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +582,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KmpShowcase/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks";
-				INFOPLIST_FILE = KmpShowcase/Info.plist;
+				INFOPLIST_FILE = "KmpShowcase/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,7 +602,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"KmpShowcase/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../shared/build/xcode-frameworks";
-				INFOPLIST_FILE = KmpShowcase/Info.plist;
+				INFOPLIST_FILE = "KmpShowcase/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

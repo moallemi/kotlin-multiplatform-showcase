@@ -2,7 +2,7 @@ import SwiftUI
 import FetchImage
 import shared
 
-struct ContentView: View {
+struct AppListView: View {
 	@StateObject private var viewModel = AppListViewModelWrapper()
 
 	var body: some View {
@@ -94,6 +94,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		AppListView()
 	}
 }
