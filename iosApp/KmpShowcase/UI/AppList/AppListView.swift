@@ -13,13 +13,16 @@ struct AppListView: View {
 					.aspectRatio(contentMode: .fit)
 					.padding()
 					.frame(height: 200)
+					.frame(maxWidth: .infinity)
 					.background(Color.accentColor)
-					.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+					.listRowInsets(EdgeInsets())
 				ForEach(viewModel.apps) { app in
 					VStack(alignment: .leading, spacing: 8) {
 						if let urlStr = app.bannerUrl,
 						   let url = URL(string: urlStr) {
-							ImageView(image: FetchImage(url: url))
+							ImageView(
+								image: FetchImage(url: url),
+								maxWidth: 300)
 								.frame(height: 150)
 								.clipped()
 								.padding(.horizontal)
@@ -36,7 +39,7 @@ struct AppListView: View {
 
 						makeLinksButtons(using: app.links)
 					}
-					.listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+					.listRowInsets(EdgeInsets())
 				}
 				.padding(.vertical)
 			}

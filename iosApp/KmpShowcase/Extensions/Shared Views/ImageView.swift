@@ -11,15 +11,17 @@ import FetchImage
 
 public struct ImageView: View {
 	@ObservedObject var image: FetchImage
+	let maxWidth: CGFloat
 
 	public var body: some View {
-		ZStack {
+		ZStack(alignment: .center) {
 			Rectangle()
 				.fill(Color(.systemFill))
 				.cornerRadius(12.0)
 			image.view?
 				.resizable()
 				.aspectRatio(contentMode: .fit)
+				.frame(maxWidth: maxWidth, alignment: .center)
 				.padding()
 		}
 		.animation(.default)
