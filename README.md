@@ -1,10 +1,15 @@
-# Kotlin Mulitplatform Showcase
+# Kotlin Multiplatform Showcase
 
 <img src="https://github.com/moallemi/kmp-showcase/blob/master/.github/kmp-showcase.png?raw=true">
 
 A minimal app illustrating **Kotlin Multiplatform**. Currently running on
 * Android
 * iOS
+* Web (in progress)
+* macOS (TODO)
+* CLI (TODO)
+
+<img src="https://github.com/moallemi/kmp-showcase/blob/master/.github/android-ios-screenshot.png?raw=true">
 
 ## Project Structure
 
@@ -26,8 +31,8 @@ The iOS app code is in the `iosApp` directory. It uses SwiftUI to render output 
 
 This is a simple Ktor server running on the Netty engine with a single endpoint `/api/v1/apps`, which outputs a list of `Apps` object serialized to JSON.
 
-Note that this repository may have errors on the side of minimalism to help more clearly illustrate key moving parts of a Kotlin
-Multiplatform project and also to help someone just starting to explore KMP to get up and running for the first time.
+Note that this repository may have not used the best practices on android or iOS implementation to help more clearly illustrate key parts of a Kotlin
+Multiplatform project and also to help someone just starting to explore KMP for the first time.
 
 ### Libraries and tools used
 
