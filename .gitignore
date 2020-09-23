@@ -376,4 +376,5 @@ obj/
 .idea/markdown-navigator
 .idea/markdown-navigator-enh.xml
 .idea/jarRepositories.xml
+.idea/artifacts
 *.hprof
