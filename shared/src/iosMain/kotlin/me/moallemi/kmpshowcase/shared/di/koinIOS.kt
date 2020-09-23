@@ -1,5 +1,6 @@
 package me.moallemi.kmpshowcase.shared.di
 
+import io.ktor.client.engine.ios.Ios
 import kotlinx.cinterop.ObjCClass
 import kotlinx.cinterop.getOriginalKotlinClass
 import org.koin.core.Koin
@@ -9,10 +10,16 @@ import org.koin.core.qualifier.Qualifier
 import org.koin.dsl.module
 
 fun initKoinIos(): KoinApplication = initKoin {
-    modules(viewModelsModule)
+    modules(
+        viewModelsModule
+    )
 }
 
-actual val platformModule = module {}
+actual val platformModule = module {
+    single {
+        Ios.create()
+    }
+}
 
 fun Koin.get(objCClass: ObjCClass, qualifier: Qualifier?, parameter: Any): Any {
     val kClazz = getOriginalKotlinClass(objCClass)!!

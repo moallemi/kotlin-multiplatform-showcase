@@ -13,7 +13,7 @@ import me.moallemi.kmpshowcase.shared.utils.log as kmpLog
 
 internal val networkModule = module {
     single {
-        HttpClient {
+        HttpClient(this@single.get()) {
             install(JsonFeature) {
                 serializer = KotlinxSerializer(this@single.get())
             }
