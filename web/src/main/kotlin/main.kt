@@ -1,5 +1,11 @@
 import kotlinx.browser.document
+import me.moallemi.kmpshowcase.shared.di.initKoinJs
 
 fun main() {
-    document.body?.textContent = "Welcome"
+    initKoinJs()
+
+    val app = Application()
+    app.load {
+        document.body?.textContent = it
+    }
 }
