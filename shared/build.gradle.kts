@@ -24,6 +24,11 @@ kotlin {
             }
         }
     }
+    js {
+        browser {
+        }
+    }
+
     sourceSets {
         all {
             languageSettings.apply {
@@ -83,6 +88,13 @@ kotlin {
             }
         }
         val iosTest by getting
+
+        val jsMain by getting {
+            dependencies {
+                api(Dependencies.Koin.core)
+                api(Dependencies.Coroutines.common)
+            }
+        }
     }
 }
 android {

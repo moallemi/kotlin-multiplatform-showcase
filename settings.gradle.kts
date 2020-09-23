@@ -19,6 +19,7 @@ rootProject.name = "kmp-showcase"
 include(":androidApp")
 include(":shared")
 include(":server")
+include(":web")
 
 enableFeaturePreview("GRADLE_METADATA")
 
