@@ -5,6 +5,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android-extensions")
     id("kotlinx-serialization")
+    id("com.codingfeline.buildkonfig") version "0.7.0"
 }
 group = "me.moallemi.kmpshowcase"
 version = "1.0-SNAPSHOT"
@@ -127,3 +128,5 @@ val packForXcode by tasks.creating(Sync::class) {
     into(targetDir)
 }
 tasks.getByName("build").dependsOn(packForXcode)
+
+apply(from = "buildKonfig.gradle")

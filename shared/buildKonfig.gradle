@@ -1,0 +1,18 @@
+buildkonfig {
+    packageName = "me.moallemi.kmpshowcase.shared"
+    
+    // default config is required
+    defaultConfigs {
+        buildConfigField 'STRING', 'API_BASE_URL', 'http://localhost:9090'
+    }
+    
+    targetConfigs {
+        android {
+            buildConfigField 'STRING', 'API_BASE_URL', 'http://10.0.2.2:9090'
+        }
+        
+        ios {
+            buildConfigField 'STRING', 'API_BASE_URL', 'http://127.0.0.1:9090'
+        }
+    }
+}
