@@ -95,6 +95,7 @@ object Dependencies {
         // Kotlin wrappers for popular JavaScript libraries
         const val react = "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.react}"
         const val dom = "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.react}"
+        const val styled = "org.jetbrains:kotlin-styled:1.0.0-pre.110-kotlin-${Versions.react}"
     }
 
 }
