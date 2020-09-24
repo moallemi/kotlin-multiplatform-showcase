@@ -3,16 +3,21 @@ buildkonfig {
     
     // default config is required
     defaultConfigs {
-        buildConfigField 'STRING', 'API_BASE_URL', 'http://localhost:9090'
+        buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_DEFAULT', 'http://localhost:9090')
     }
     
     targetConfigs {
         android {
-            buildConfigField 'STRING', 'API_BASE_URL', 'http://10.0.2.2:9090'
+            buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_ANDROID', 'http://10.0.2.2:9090')
         }
         
         ios {
-            buildConfigField 'STRING', 'API_BASE_URL', 'http://127.0.0.1:9090'
+            buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_IOS', 'http://127.0.0.1:9090')
         }
     }
+}
+
+Object getProperty(String propertyName, Object defaultValue) {
+    def propertyValue = project.properties[propertyName]
+    return propertyValue != null ? propertyValue : defaultValue
 }

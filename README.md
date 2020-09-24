@@ -48,6 +48,14 @@ Multiplatform project and also to help someone just starting to explore KMP for 
 * The iOS code can be modified or built by opening `iosApp/KmpShowcase.xcodeproj` in Xcode.
 * Running `./gradlew server:run` will deploy the server to localhost on port 8080.
 
+Once you setup the project, you might want to change server address in your `~/.gradle/gradle.properties`:
+
+```
+KMP_SHOWCASE_API_BASE_URL_DEFAULT=<insert> // default: http://localhost:9090
+KMP_SHOWCASE_API_BASE_URL_ANDROID=<insert> // default: http://10.0.2.2:9090
+KMP_SHOWCASE_API_BASE_URL_IOS=<insert> // default: http://127.0.0.1:9090
+```
+
 ## Contributions
 
 If you've found an error in this sample, please file an issue.
