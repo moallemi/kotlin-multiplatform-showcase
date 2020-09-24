@@ -2,6 +2,7 @@ package me.moallemi.kmpshowcase.server
 
 import io.ktor.application.Application
 import io.ktor.application.install
+import io.ktor.features.CORS
 import io.ktor.features.ContentNegotiation
 import io.ktor.http.content.resources
 import io.ktor.http.content.static
@@ -15,6 +16,12 @@ fun Application.module(testing: Boolean = false) {
 
     install(ContentNegotiation) {
         json()
+    }
+
+    if (isDev) {
+        install(CORS) {
+            anyHost()
+        }
     }
 
     routing {
