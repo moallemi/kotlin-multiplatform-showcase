@@ -1,15 +1,13 @@
 import kotlinx.browser.document
-import kotlinx.html.dom.append
 import me.moallemi.kmpshowcase.shared.di.initKoinJs
+import react.dom.render
+import react.child
 
 fun main() {
     initKoinJs()
 
     val app = Application()
-    app.load { apps ->
-        document.getElementById("root")
-            ?.append {
-                apps.onEach(::createCard)
-            }
+    render(document.getElementById("root")) {
+        child(app.createRootComponent())
     }
 }

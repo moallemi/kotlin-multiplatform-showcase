@@ -14,6 +14,10 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 @JvmOverloads
 fun Application.module(testing: Boolean = false) {
 
+    install(CORS) {
+        host("localhost:8081")
+    }
+
     install(ContentNegotiation) {
         json()
     }

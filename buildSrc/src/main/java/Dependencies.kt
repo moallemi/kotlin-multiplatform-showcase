@@ -16,6 +16,7 @@ object Versions {
     const val recyclerView = "1.2.0-alpha05"
     const val glide = "4.11.0"
     const val logback = "1.2.3"
+    const val react = "1.4.0"
 
     object Android {
         const val minSdk = 21
@@ -89,4 +90,11 @@ object Dependencies {
         const val commonSerialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
         const val androidSerialization = "io.ktor:ktor-client-serialization-jvm:${Versions.ktor}"
     }
+
+    object KotlinWrappers {
+        // Kotlin wrappers for popular JavaScript libraries
+        const val react = "org.jetbrains:kotlin-react:16.13.1-pre.110-kotlin-${Versions.react}"
+        const val dom = "org.jetbrains:kotlin-react-dom:16.13.1-pre.110-kotlin-${Versions.react}"
+    }
+
 }
