@@ -20,6 +20,7 @@ include(":androidApp")
 include(":shared")
 include(":server")
 include(":web")
+include(":webReact")
 
 enableFeaturePreview("GRADLE_METADATA")
 
