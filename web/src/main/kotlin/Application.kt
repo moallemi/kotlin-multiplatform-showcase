@@ -25,10 +25,6 @@ class Application : KoinComponent {
             appListViewModel.apps.onEach { setApps(it) }.launchIn(scope)
         }
 
-        h1 {
-            +"KMM Apps"
-        }
-
         child(AppList) { attrs.apps = apps }
 
     }

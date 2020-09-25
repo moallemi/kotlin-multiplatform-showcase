@@ -22,6 +22,9 @@ val AppList = functionalComponent<AppListProps> { props ->
             flexWrap = FlexWrap.wrap
             justifyContent = JustifyContent.center
         }
+
+        child(Banner)
+
         props.apps.forEach { item ->
             child(card) {
                 attrs.name = item.name
