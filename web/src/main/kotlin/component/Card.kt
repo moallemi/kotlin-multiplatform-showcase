@@ -1,3 +1,5 @@
+package component
+
 import react.RProps
 import react.functionalComponent
 import styled.css

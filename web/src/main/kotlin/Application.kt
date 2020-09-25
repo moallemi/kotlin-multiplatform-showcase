@@ -1,3 +1,4 @@
+import component.AppList
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -6,7 +7,6 @@ import org.koin.core.KoinComponent
 import org.koin.core.inject
 import react.RProps
 import react.child
-import react.dom.h1
 import react.functionalComponent
 import react.useEffect
 import react.useState

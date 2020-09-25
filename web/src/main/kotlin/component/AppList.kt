@@ -1,3 +1,5 @@
+package component
+
 import me.moallemi.kmpshowcase.shared.domain.model.App
 import react.RProps
 import react.child
