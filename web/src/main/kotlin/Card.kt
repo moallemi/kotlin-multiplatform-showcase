@@ -1,20 +1,29 @@
+import kotlinx.css.Align
 import kotlinx.css.Color
+import kotlinx.css.Display
+import kotlinx.css.FlexDirection
 import kotlinx.css.ObjectFit
+import kotlinx.css.alignSelf
+import kotlinx.css.backgroundColor
 import kotlinx.css.borderRadius
 import kotlinx.css.borderTopLeftRadius
 import kotlinx.css.borderTopRightRadius
+import kotlinx.css.color
+import kotlinx.css.display
+import kotlinx.css.flexDirection
+import kotlinx.css.fontFamily
+import kotlinx.css.fontSize
 import kotlinx.css.height
+import kotlinx.css.lineHeight
 import kotlinx.css.margin
 import kotlinx.css.objectFit
 import kotlinx.css.padding
 import kotlinx.css.pct
 import kotlinx.css.properties.boxShadow
+import kotlinx.css.properties.lh
 import kotlinx.css.px
 import kotlinx.css.width
 import react.RProps
-import react.dom.b
-import react.dom.h4
-import react.dom.p
 import react.functionalComponent
 import styled.css
 import styled.styledDiv
@@ -40,13 +49,24 @@ val card = functionalComponent<CardProps> { props ->
                 0.px,
             )
         }
-        styledImg(src = props.bannerUrl, alt = "HeaderImage") {
+        styledDiv {
             css {
+                display = Display.flex
+                flexDirection = FlexDirection.column
                 width = 100.pct
                 height = 100.px
-                objectFit = ObjectFit.cover
                 borderTopLeftRadius = 5.px
                 borderTopRightRadius = 5.px
+                backgroundColor = Color("#eaeaea")
+            }
+
+            styledImg(src = props.bannerUrl, alt = "HeaderImage") {
+                css {
+                    alignSelf = Align.center
+                    width = 80.pct
+                    height = 100.pct
+                    objectFit = ObjectFit.scaleDown
+                }
             }
         }
 
@@ -54,8 +74,24 @@ val card = functionalComponent<CardProps> { props ->
             css {
                 padding = "2px 16px;"
             }
-            h4 { b { +props.name } }
-            p { +props.summary }
+            styledDiv {
+                css {
+                    fontFamily = "sans-serif"
+                    fontSize = 16.px
+                    color = Color("#000000")
+                    padding(vertical = 10.px)
+                }
+                +props.name
+            }
+            styledDiv {
+                css {
+                    fontFamily = "sans-serif"
+                    fontSize = 14.px
+                    color = Color("#888")
+                    lineHeight = 18.px.lh
+                }
+                +props.summary
+            }
         }
 
     }
