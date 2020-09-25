@@ -9,7 +9,7 @@ dependencies {
 
     //React, React DOM + Wrappers
     implementation(Dependencies.KotlinWrappers.react)
-    implementation(Dependencies.KotlinWrappers.dom)
+    implementation(Dependencies.KotlinWrappers.reactDom)
     implementation(npm("react", "16.13.1"))
     implementation(npm("react-dom", "16.13.1"))
 
