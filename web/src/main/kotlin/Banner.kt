@@ -1,10 +1,3 @@
-import kotlinx.css.Color
-import kotlinx.css.backgroundColor
-import kotlinx.css.height
-import kotlinx.css.padding
-import kotlinx.css.pct
-import kotlinx.css.px
-import kotlinx.css.width
 import react.RProps
 import react.functionalComponent
 import styled.css
@@ -16,11 +9,6 @@ private val bannerBase64 =
 
 val Banner = functionalComponent<RProps> {
     styledImg(src = bannerBase64) {
-        css {
-            width = 100.pct
-            height = 120.px
-            padding(vertical = 30.px)
-            backgroundColor = Color("#4c49eb")
-        }
+        css(Styles.banner)
     }
 }

@@ -1,9 +1,3 @@
-import kotlinx.css.Display
-import kotlinx.css.FlexWrap
-import kotlinx.css.JustifyContent
-import kotlinx.css.display
-import kotlinx.css.flexWrap
-import kotlinx.css.justifyContent
 import me.moallemi.kmpshowcase.shared.domain.model.App
 import react.RProps
 import react.child
@@ -17,14 +11,8 @@ external interface AppListProps : RProps {
 
 val AppList = functionalComponent<AppListProps> { props ->
     styledDiv {
-        css {
-            display = Display.flex
-            flexWrap = FlexWrap.wrap
-            justifyContent = JustifyContent.center
-        }
-
+        css(Styles.appList)
         child(Banner)
-
         props.apps.forEach { item ->
             child(card) {
                 attrs.name = item.name
