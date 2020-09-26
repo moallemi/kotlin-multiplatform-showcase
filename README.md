@@ -62,7 +62,7 @@ KMP_SHOWCASE_API_BASE_URL_IOS_ARM64=<insert> // default: http://localhost:9090
 
 ## Contributions
 
-If you've found an error in this sample, please file an issue.
+If you've found an error in this sample or you want to improve the project, please read the [Contributing Guide](CONTRIBUTING.md) first.
 
 Patches are encouraged, and may be submitted by forking this project and
 submitting a pull request. Since this project is still in its very early stages,
