@@ -1,5 +1,6 @@
 buildkonfig {
     packageName = "me.moallemi.kmpshowcase.shared"
+    objectName = "SharedConfig"
     
     // default config is required
     defaultConfigs {
@@ -10,9 +11,13 @@ buildkonfig {
         android {
             buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_ANDROID', 'http://10.0.2.2:9090')
         }
-        
-        ios {
-            buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_IOS', 'http://127.0.0.1:9090')
+
+        iosX64 {
+            buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_IOS_X64', 'http://localhost:9090')
+        }
+
+        iosArm64 {
+            buildConfigField 'STRING', 'API_BASE_URL', getProperty('KMP_SHOWCASE_API_BASE_URL_IOS_ARM64', 'http://localhost:9090')
         }
     }
 }
