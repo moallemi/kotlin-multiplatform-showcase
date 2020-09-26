@@ -3,9 +3,10 @@
 <img src="https://github.com/moallemi/kmp-showcase/blob/master/.github/kmp-showcase.png?raw=true">
 
 A minimal app illustrating **Kotlin Multiplatform**. Currently running on
-* Android
-* iOS
-* Web (in progress)
+* Android (available on [Google Play](https://play.google.com/store/apps/details?id=me.moallemi.kmpshowcase))
+* iOS (Rejected by Apple!)
+* Web (view  [Demo](https://kmp-showcase-web.herokuapp.com))
+* Web-React (in progress)
 * macOS (TODO)
 * CLI (TODO)
 
@@ -44,16 +45,19 @@ Multiplatform project and also to help someone just starting to explore KMP for 
 * [SwiftUI](https://developer.apple.com/documentation/swiftui)
 
 ### Development setup
-* For development, the latest version of Android Studio 4.0+ is required.
-* The iOS code can be modified or built by opening `iosApp/KmpShowcase.xcodeproj` in Xcode.
-* Running `./gradlew server:run` will deploy the server to localhost on port 8080.
+* **Android**: For development, the latest version of Android Studio 4.0+ is required.
+* **iOS**: The iOS code can be modified or built by opening `iosApp/KmpShowcase.xcodeproj` in Xcode.
+* **Server**: Running `./gradlew server:run` will deploy the server to localhost on port 9090.
+* **Web**: Running `./gradlew web:run -t` will run web client on localhost.
+* **WebReact**: Running `./gradlew webReact:run -t` will run web React client on localhost.
 
 Once you setup the project, you might want to change server address in your `~/.gradle/gradle.properties`:
 
 ```
 KMP_SHOWCASE_API_BASE_URL_DEFAULT=<insert> // default: http://localhost:9090
 KMP_SHOWCASE_API_BASE_URL_ANDROID=<insert> // default: http://10.0.2.2:9090
-KMP_SHOWCASE_API_BASE_URL_IOS=<insert> // default: http://127.0.0.1:9090
+KMP_SHOWCASE_API_BASE_URL_IOS_X64=<insert> // default: http://localhost:9090
+KMP_SHOWCASE_API_BASE_URL_IOS_ARM64=<insert> // default: http://localhost:9090
 ```
 
 ## Contributions
