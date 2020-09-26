@@ -22,5 +22,8 @@ include(":server")
 include(":web")
 include(":webReact")
 
-enableFeaturePreview("GRADLE_METADATA")
+if (System.getenv("KMP_SHOWCASE_DEPLOY_PROJECT")?.contains("web") == true) {
+    include(":deploy")
+}
 
+enableFeaturePreview("GRADLE_METADATA")
