@@ -18,9 +18,9 @@ fun Application.module(testing: Boolean = false) {
         json()
     }
 
-    if (isDev) {
-        install(CORS) {
-            anyHost()
+    install(CORS) {
+        corsAllowedHosts.onEach { allowedHost ->
+            host(host = allowedHost, schemes = listOf("http", "https"))
         }
     }
 
