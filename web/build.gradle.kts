@@ -13,7 +13,7 @@ kotlin {
         useCommonJs()
         browser {
             runTask {
-                outputFileName = "app.js"
+                outputFileName = "web.js"
             }
         }
         binaries.executable()
