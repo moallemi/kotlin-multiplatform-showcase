@@ -30,7 +30,9 @@ class Application : KoinComponent {
 
 fun TagConsumer<HTMLElement>.createCard(app: App) {
     div(classes = "card kmp-card") {
-        img(src = app.bannerUrl, classes = "card-img-top")
+        div(classes = "kmp-banner") {
+            img(src = app.bannerUrl, classes = "card-img-top")
+        }
         div(classes = "card-body") {
             h5(classes = "card-title") { +app.name }
             p(classes = "card-text") { +app.summary }

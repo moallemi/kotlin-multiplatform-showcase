@@ -1,3 +1,57 @@
+.top-banner {
+    width: 100%;
+    height: 150px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #4c49eb;
+}
+
+.kmp-card  {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 .kmp-card img {
     padding: 20px;
+    align-self: center;
+    width: 80%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.kmp-banner {
+    background: #eee;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 75px;
+  height: 75px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
