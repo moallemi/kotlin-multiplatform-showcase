@@ -6,18 +6,20 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ConcatAdapter
 import com.google.android.material.appbar.AppBarLayout
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.launch
 import me.moallemi.kmpshowcase.R
 import me.moallemi.kmpshowcase.databinding.FragmentHomeBinding
+import me.moallemi.kmpshowcase.shared.domain.model.App
 import me.moallemi.kmpshowcase.shared.presentation.AppListViewModel
+import me.moallemi.kmpshowcase.shared.presentation.AppListViewModelNavigation
+import me.moallemi.kmpshowcase.shared.presentation.AppListViewModelNavigation.NavigateToUrl
+import me.moallemi.kmpshowcase.util.collect
+import me.moallemi.kmpshowcase.util.openUrl
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.math.abs
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home), OnAppItemClickListener {
 
     private val appListViewModel: AppListViewModel by viewModel()
 
@@ -35,17 +37,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         fragmentBinding = FragmentHomeBinding.bind(view)
         fragmentBinding?.rootRecyclerView?.adapter = adapter
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            appListViewModel.apps.collect { items ->
-                val appsAdapter = AppsListAdapter().apply {
-                    this.submitList(items)
-                }
-                adapter.addAdapter(appsAdapter)
-
-                if (items.isNotEmpty()) {
-                    fragmentBinding?.progressBar?.isVisible = false
-                }
-            }
+        appListViewModel.apply {
+            collect(apps, ::collectApps)
+            collect(navigation, ::collectNavigation)
         }
 
         appListViewModel.load()
@@ -67,5 +61,34 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onDestroy() {
         fragmentBinding = null
         super.onDestroy()
+    }
+
+    private fun collectApps(items: List<App>) {
+        val appsAdapter = AppsListAdapter(this).apply {
+            this.submitList(items)
+        }
+        adapter.addAdapter(appsAdapter)
+
+        if (items.isNotEmpty()) {
+            fragmentBinding?.progressBar?.isVisible = false
+        }
+    }
+
+    private fun collectNavigation(navigation: AppListViewModelNavigation?) {
+        if (navigation is NavigateToUrl) {
+            context?.openUrl(navigation.url)
+        }
+    }
+
+    override fun onGooglePlayLinkClicked(url: String?) {
+        appListViewModel.onGooglePlayLinkClicked(url)
+    }
+
+    override fun onAppStoreLinkClicked(url: String?) {
+        appListViewModel.onAppStoreLinkClicked(url)
+    }
+
+    override fun onWebsiteLinkClicked(url: String?) {
+        appListViewModel.onWebsiteLinkClicked(url)
     }
 }
