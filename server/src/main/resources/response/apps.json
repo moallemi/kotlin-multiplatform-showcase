@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2020-09-21T11:53:11.133Z",
+  "lastUpdate": "2020-10-04T11:53:11.133Z",
   "apps": [
     {
       "name": "Quizlet",
@@ -9,9 +9,22 @@
       "links": {
         "appStore": "https://apps.apple.com/us/app/quizlet-flashcards-study-tools/id546473125",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.quizlet.quizletandroid",
-        "website": "https://quizlet.com/"
+        "website": "https://quizlet.com/",
+        "article": "https://kotlinlang.org/lp/mobile/case-studies/quizlet/"
       }
     },
+    {
+      "name": "VMware",
+      "id": "vmware",
+      "summary": "VMware uses Kotlin Multiplatform Mobile in various modules across their Workspace ONE productivity app portfolio.",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/plangrid-construction-collaboration/id498795789",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.plangrid.android&hl=en",
+        "website": "https://www.plangrid.com",
+        "article": "https://kotlinlang.org/lp/mobile/case-studies/vmware/"
+      }
+    },
+    ,
     {
       "name": "PlanGrid",
       "id": "plangrid",
@@ -19,7 +32,8 @@
       "links": {
         "appStore": "https://apps.apple.com/us/app/plangrid-construction-collaboration/id498795789",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.plangrid.android&hl=en",
-        "website": "https://www.plangrid.com"
+        "website": "https://www.plangrid.com",
+        "article": "https://kotlinlang.org/lp/mobile/case-studies/autodesk/"
       }
     },
     {
@@ -41,7 +55,8 @@
       "links": {
         "appStore": "https://apps.apple.com/us/app/square-cash/id711923939",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.squareup.cash",
-        "website": "https://cash.app"
+        "website": "https://cash.app",
+        "article": "https://kotlinconf.com/2019/talks/video/2019/116027/"
       }
     },
     {
@@ -50,7 +65,8 @@
       "summary": "The UI for each of the Chalk.com apps is native to the platform, but other than that, almost everything else for their apps can be shared with Kotlin Multiplatform Mobile.",
       "bannerUrl": "",
       "links": {
-        "website": "https://www.chalk.com/"
+        "website": "https://www.chalk.com/",
+        "article": "https://kotlinlang.org/lp/mobile/case-studies/chalk/"
       }
     },
     {
@@ -61,7 +77,8 @@
       "links": {
         "appStore": "https://apps.apple.com/us/app/fastwork-hire-freelancers-at-your-fingertips/id1154830520?ls=1",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.fastwork.app&hl=en",
-        "website": "https://fastwork.co/"
+        "website": "https://fastwork.co/",
+        "article": "https://kotlinlang.org/lp/mobile/case-studies/fastwork/"
       }
     },
     {
@@ -72,7 +89,53 @@
       "links": {
         "appStore": "https://apps.apple.com/us/app/careem-rides-food-delivery/id592978487",
         "googlePlay": "https://play.google.com/store/apps/details?id=com.careem.acma",
-        "website": "https://www.careem.com"
+        "website": "https://www.careem.com",
+        "article": "https://kotlinconf.com/2019/talks/video/2019/127172/"
+      }
+    },
+    {
+      "name": "Target",
+      "id": "target",
+      "summary": "Now the Target app can help you have a more rewarding Target run! Introducing Target Circle, which gives you access to hundreds of deals, a birthday gift and the chance to support your community",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/app/apple-store/id297430070?mt=8",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.target.ui",
+        "website": "https://www.target.com/",
+        "article": "https://tech.target.com/2019/04/02/gift-registry-kotlin-multiplatform.html"
+      }
+    },
+    {
+      "name": "Studyo",
+      "id": "studyo",
+      "summary": "Get ready for college and the world by learning to get organized. Students absolutely love Studyo and use it many times a day. Schools have adopted Studyo to better prepare students for College and for life, replacing paper planners and other solutions, complementing their admin systems and LMS.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/studyo/id981974458",
+        "googlePlay": "https://play.google.com/store/apps/details?id=app.studyo.prod.android.react&hl=en",
+        "website": "https://studyo.co/"
+      }
+    },
+    {
+      "name": "Eneco",
+      "id": "eneco",
+      "summary": "Do you use more energy with washing, heating or cooking? And how can you save? The Eneco app gives you insight and useful tips. You also arrange all your energy matters there. Download it now.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/nl/app/eneco/id827734058",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.afrogleap.eneco.myeneco",
+        "website": "https://www.eneco.nl"
+      }
+    },
+    {
+      "name": "Hue Essentials",
+      "id": "hue-essentials",
+      "summary": "Discover ways to get the most out of your smart lighting.",
+      "bannerUrl": "",
+      "links": {
+        "appStore": "https://apps.apple.com/app/id1462943921",
+        "googlePlay": "https://play.google.com/store/apps/details?id=com.superthomaslab.hueessentials",
+        "website": "https://www.hueessentials.com/"
       }
     }
   ]
