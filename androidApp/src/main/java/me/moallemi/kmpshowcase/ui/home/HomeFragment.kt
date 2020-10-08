@@ -76,6 +76,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), OnAppItemClickListener {
 
     private fun collectNavigation(navigation: AppListViewModelNavigation?) {
         if (navigation is NavigateToUrl) {
+            appListViewModel.onNavigated()
             context?.openUrl(navigation.url)
         }
     }

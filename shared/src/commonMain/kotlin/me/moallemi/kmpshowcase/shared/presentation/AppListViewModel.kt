@@ -39,4 +39,8 @@ class AppListViewModel(
     fun onWebsiteLinkClicked(url: String?) {
         _navigation.value = NavigateToUrl(url)
     }
+
+    fun onNavigated() {
+        _navigation.value = null
+    }
 }
