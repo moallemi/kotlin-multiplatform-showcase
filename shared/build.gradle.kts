@@ -105,8 +105,6 @@ android {
     defaultConfig {
         minSdkVersion(Versions.Android.minSdk)
         targetSdkVersion(Versions.Android.targetSdk)
-        versionCode = 1
-        versionName = "1.0.0"
     }
     buildTypes {
         getByName("release") {
