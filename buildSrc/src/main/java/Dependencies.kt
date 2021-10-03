@@ -1,14 +1,14 @@
 object Versions {
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.5.10"
     const val androidxTest = "1.2.0"
     const val androidxTestExt = "1.1.1"
-    const val androidGradlePlugin = "4.0.1" // manually update in root settings.gradle.kts
+    const val androidGradlePlugin = "7.0.2"
     const val constraintLayout = "2.0.0"
     const val appCompat = "1.2.0"
     const val coreKtx = "1.2.0"
     const val materialDesign = "1.2.0"
     const val junit = "4.13"
-    const val koin = "3.0.0-alpha-4"
+    const val koin = "3.1.2"
     const val coroutines = "1.3.9-native-mt"
     const val kotlinxSerialization = "1.0.0-RC"
     const val lifecycle = "2.2.0"
