@@ -1,6 +1,7 @@
 package me.moallemi.kmpshowcase.ui.home
 
 import android.view.View
+import androidx.core.view.isVisible
 import me.moallemi.kmpshowcase.R
 import me.moallemi.kmpshowcase.databinding.ItemAppItemBinding
 import me.moallemi.kmpshowcase.shared.domain.model.App
@@ -16,6 +17,10 @@ class AppsListAdapter(
             title.text = model.name
             summary.text = model.summary
             banner.load(model.bannerUrl)
+
+            googlePlay.isVisible = model.links?.googlePlay != null
+            appStore.isVisible = model.links?.appStore != null
+            website.isVisible = model.links?.website != null
 
             googlePlay.setOnClickListener {
                 onAppItemClickListener.onGooglePlayLinkClicked(model.links?.googlePlay)
