@@ -136,6 +136,16 @@
         "googlePlay": "https://play.google.com/store/apps/details?id=com.superthomaslab.hueessentials",
         "website": "https://www.hueessentials.com/"
       }
+    },
+    {
+      "name": "Netflix",
+      "id": "netflix",
+      "summary": "KMM helps tech giant Netflix optimize product reliability and speed of delivery, crucial for serving their customers' constantly evolving needs.",
+      "bannerUrl": "",
+      "links": {
+        "website": "https://netflix.com/",
+        "article": "https://netflixtechblog.com/netflix-android-and-ios-studio-apps-kotlin-multiplatform-d6d4d8d25d23"
+      }
     }
   ]
 }
