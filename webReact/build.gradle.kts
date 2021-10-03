@@ -9,8 +9,8 @@ dependencies {
     //React, React DOM + Kotlin Wrappers
     implementation(Dependencies.KotlinWrappers.react)
     implementation(Dependencies.KotlinWrappers.reactDom)
-    implementation(npm("react", "16.13.1"))
-    implementation(npm("react-dom", "16.13.1"))
+    implementation(npm("react", "17.0.2"))
+    implementation(npm("react-dom", "17.0.2"))
 
     //Styled + Kotlin Wrappers
     implementation(Dependencies.KotlinWrappers.styled)
