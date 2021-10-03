@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         gradlePluginPortal()
-        jcenter()
         google()
         mavenCentral()
     }
@@ -18,7 +17,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
-        maven(url = "https://dl.bintray.com/ekito/koin")
+        maven { url = uri("https://maven.pkg.jetbrains.space/public/p/kotlinx-html/maven") }
     }
 }

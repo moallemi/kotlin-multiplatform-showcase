@@ -23,7 +23,6 @@ dependencies {
 
     implementation(Dependencies.Koin.core)
     implementation(Dependencies.Koin.android)
-    implementation(Dependencies.Koin.viewModel)
 
     implementation(Dependencies.Coroutines.common)
     implementation(Dependencies.Coroutines.android)
